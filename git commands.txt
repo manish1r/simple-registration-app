@@ -1,0 +1,60 @@
+git init //initializes git
+git add . //adds all files
+git commit -m "Commit" //adds the commit
+git remote add origin https://github.com/manish1r/devops.git //connects with the repository
+git branch -M main //creates a new branch
+git push -u origin main //push the branch into git
+
+
+ChatGPT said:
+
+Here is the FULL LIST of all important Git commands with simple explanations, perfect for lab exam + viva + quick revision.
+Very easy to remember!
+
+🧩 GIT COMMANDS — COMPLETE LIST (With Simple Descriptions)
+🔵 1. Git Configuration Commands
+Command	Description
+git --version	Check Git version
+git config --global user.name "Your Name"	Set username
+git config --global user.email "you@email.com"	Set email
+git config --list	Show all Git configs
+🔵 2. Git Initialization
+Command	Description
+git init	Create a new Git repository
+git clone <url>	Download an existing repo
+🔵 3. Checking Status
+Command	Description
+git status	See changed/untracked files
+🔵 4. Adding Files
+Command	Description
+git add file.txt	Add a single file
+git add .	Add all files to staging area
+git add *.js	Add all JS files
+🔵 5. Commit Commands
+Command	Description
+git commit -m "message"	Save changes with message
+git commit -am "message"	Add + commit tracked files
+🔵 6. Viewing Commit History
+Command	Description
+git log	Detailed commit history
+git log --oneline	Short single-line history
+git log --graph	Show tree structure
+🔵 7. Branching Commands
+Command	Description
+git branch	List branches
+git branch <name>	Create new branch
+git checkout <branch>	Switch branch
+git checkout -b <name>	Create + switch branch
+git branch -d <branch>	Delete branch
+🔵 8. Merging Commands
+Command	Description
+git merge <branch>	Merge a branch into current
+git merge --abort	Cancel merge if conflict
+🔵 9. Working with Remote (GitHub)
+Command	Description
+git remote -v	Show remote URLs
+git remote add origin <url>	Add GitHub repo
+git push -u origin main	Push code for first time
+git push	Push latest commits
+git pull	Download latest changes
+git fetch	Download changes (no merge)

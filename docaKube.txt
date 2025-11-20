@@ -1,0 +1,111 @@
+✅ 1. Basic Docker Commands
+Command	Description
+docker --version	Check installed Docker version
+docker info	Show Docker system info
+docker help	Show help for Docker commands
+✅ 2. Docker Image Commands
+Command	Description
+docker pull <image>	Download image from Docker Hub
+docker images	List all images on your system
+docker rmi <image>	Delete an image
+docker build -t <name> .	Build image using Dockerfile
+docker tag <image> <new-name>	Rename or retag an image
+docker push <image>	Upload image to Docker Hub
+docker history <image>	Show layers of an image
+docker save -o img.tar <image>	Save image to a file
+docker load -i img.tar	Load image from file
+✅ 3. Docker Container Commands
+Command	Description
+docker run <image>	Run container
+docker run -d <image>	Run container in background (detached mode)
+docker run -p 8080:80 <image>	Map container port → host port
+docker ps	List running containers
+docker ps -a	List all containers (including stopped)
+docker stop <container>	Stop a running container
+docker start <container>	Start a stopped container
+docker restart <container>	Restart a container
+docker rm <container>	Remove container
+docker kill <container>	Force-stop container
+docker logs <container>	Show container logs
+docker exec -it <container> /bin/bash	Enter container shell
+✅ 4. Docker Volume Commands
+Command	Description
+docker volume create <name>	Create a volume
+docker volume ls	List volumes
+docker volume inspect <name>	Show volume details
+docker volume rm <name>	Delete a volume
+
+☸️ ALL IMPORTANT KUBERNETES (kubectl) COMMANDS (With Description)
+🌟 1. Cluster Information
+Command	Description
+kubectl version	Show Kubernetes version
+kubectl cluster-info	Show cluster details
+kubectl get nodes	List all nodes
+kubectl describe node <name>	Detailed info of node
+🌟 2. Working with Pods
+Command	Description
+kubectl get pods	List running pods
+kubectl get pods -o wide	Pods with node & IP info
+kubectl describe pod <name>	Full details of pod
+kubectl logs <pod>	View pod logs
+kubectl exec -it <pod> -- /bin/bash	Open pod terminal
+kubectl delete pod <pod>	Delete a pod
+🌟 3. Working with Deployments
+Command	Description
+kubectl get deployments	List deployments
+kubectl describe deployment <name>	Deployment details
+kubectl apply -f file.yaml	Create/Update deployment
+kubectl delete -f file.yaml	Delete deployment
+kubectl set image deployment/<name> <container>=<new-image>	Update image
+kubectl rollout status deployment/<name>	Check rollout
+kubectl rollout undo deployment/<name>	Rollback to previous version
+🌟 4. Scaling
+Command	Description
+kubectl scale deployment <name> --replicas=5	Scale pods to 5
+kubectl autoscale deployment <name> --min=2 --max=10 --cpu-percent=80	Enable autoscaling
+🌟 5. Working with Services
+Command	Description
+kubectl get svc	Show services
+kubectl describe svc <name>	Service details
+kubectl expose deployment <name> --type=NodePort --port=80	Create service
+kubectl delete svc <name>	Delete service
+🌟 6. Working with Namespaces
+Command	Description
+kubectl get namespaces	List namespaces
+kubectl create namespace dev	Create namespace
+kubectl delete namespace dev	Delete namespace
+🌟 7. Working with ConfigMaps
+Command	Description
+kubectl create configmap myconfig --from-literal=key=value	Create ConfigMap
+kubectl get configmaps	List ConfigMaps
+kubectl describe configmap myconfig	View details
+🌟 8. Working with Secrets
+Command	Description
+kubectl create secret generic mysecret --from-literal=password=123	Create secret
+kubectl get secrets	List secrets
+kubectl describe secret mysecret	View secret details
+🌟 9. Working with YAML Files
+Command	Description
+kubectl apply -f <file>	Create/Update resources
+kubectl delete -f <file>	Delete resources
+kubectl get -f <file>	Get objects defined in file
+🌟 10. Debugging Commands
+Command	Description
+kubectl get events	Show cluster events
+kubectl describe pod <pod>	View errors & issues
+kubectl logs <pod> -p	Logs from previous crashed pod
+🎉 EXTRA: MOST IMPORTANT COMMANDS FOR EXAM
+🔵 Docker
+docker build -t app .
+docker run -d -p 8080:80 app
+docker ps
+docker stop <id>
+docker images
+docker rmi <image>
+
+🔵 Kubernetes
+kubectl apply -f deployment.yaml
+kubectl get pods
+kubectl get svc
+kubectl delete pod <name>
+kubectl scale deployment simple-app-deployment --replicas=5
